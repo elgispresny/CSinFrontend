@@ -29,18 +29,15 @@ export default class DoubleLinkedList {
 
     insertBackward(link: Link): void {
 
-        if (this.isEmpty()) {
-            this.last = link;
+        if (this.isEmpty()) {            
             this.first = link;
-            this.first.next = this.last;
-            this.last.previous = this.first;
         }
 
         else {
             this.last.next = link;
-            link.previous = this.last;
-            this.last = link;
         }
+        link.previous = this.last;
+        this.last = link;
     }
 
     displayFromFirst() {
@@ -49,6 +46,15 @@ export default class DoubleLinkedList {
         while (current != null) {
             console.log(current.data + " ");
             current = current.next;
+        }
+    }
+
+    displayFromLast() {
+
+        let current = this.last;
+        while (current != null) {
+            console.log(current.data + " ");
+            current = current.previous;
         }
     }
 }
