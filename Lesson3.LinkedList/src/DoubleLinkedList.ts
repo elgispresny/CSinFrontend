@@ -51,7 +51,7 @@ export default class DoubleLinkedList {
     displayFromFirst() {
 
         let current = this.first;
-        while (!current.next === null) {
+        while (!current.next == null) {
             console.log(current.data + " ");
             current = current.next;
         }
