@@ -4,6 +4,12 @@ export default class DoubleLinkedList {
     first: Link;
     last: Link;
 
+    constructor(){
+
+        this.first = null;
+        this.last = null;
+    }
+
     isEmpty(): boolean {
         return this.first === null;
     };
@@ -15,12 +21,14 @@ export default class DoubleLinkedList {
             this.first = link;
             this.first.next = this.last;
             this.last.previous = this.first;
+            this.last.next = null;
         }
 
         else {
             this.first.previous = link;
             link.next = this.first;
             this.first = link;
+            this.first.previous = null;
         }
     }
 
