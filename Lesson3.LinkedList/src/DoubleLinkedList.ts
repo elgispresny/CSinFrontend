@@ -57,4 +57,32 @@ export default class DoubleLinkedList {
             current = current.previous;
         }
     }
+
+    deleteFirst(): Link {
+
+        let temp: Link = this.first;
+
+        if (this.first.next = null) {
+            this.last = null;
+        }
+        else {
+            this.first.next.previous = null;            
+        }
+        this.first = this.first.next;
+        return temp;
+    }
+
+    deleteLast(): Link {
+
+        let temp: Link = this.last;
+
+        if (this.first.next = null) {
+            this.first = null;
+        }
+        else {
+            this.last.previous.next = null;
+        }
+        this.last = this.last.previous;
+        return temp;
+    }
 }
