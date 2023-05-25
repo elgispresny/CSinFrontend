@@ -85,4 +85,10 @@ export default class DoubleLinkedList {
         this.last = this.last.previous;
         return temp;
     }
+
+    getLast(): Link {
+
+        return this.last;
+    }
+
 }
