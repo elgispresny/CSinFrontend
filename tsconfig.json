@@ -2,11 +2,8 @@
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "build"
-  },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
+    "outDir": "build",
+    "strictNullChecks": false,
   },
   "include": [
     "src/**/*.ts",

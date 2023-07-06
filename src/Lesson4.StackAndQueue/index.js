@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var LinkQueue_1 = require("./LinkQueue");
+var Link_1 = require("../Lesson3.LinkedList/Link");
+var queue = new LinkQueue_1.default();
+queue.push(new Link_1.default(1));
+queue.push(new Link_1.default(2));
+queue.push(new Link_1.default(3));
+queue.push(new Link_1.default(4));
+queue.display();
+console.log(queue.pop());
+console.log(queue.pop());
+queue.display();

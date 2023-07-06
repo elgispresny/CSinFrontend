@@ -4,7 +4,6 @@
   "description": "",
   "main": "build/src/inpdex.js",
   "types": "build/src/index.d.ts",
-  "type": "module",
   "files": [
     "build/src"
   ],
