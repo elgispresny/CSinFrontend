@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable prettier/prettier */
 function filter<T>(iter: Iterable<T>, pred: (el: T) => boolean): IterableIterator<T> {
   const innerIter = iter[Symbol.iterator]();
   return {
@@ -6,8 +8,6 @@ function filter<T>(iter: Iterable<T>, pred: (el: T) => boolean): IterableIterato
     },
     next() {
       let chunk = innerIter.next();
-
-      // eslint-disable-next-line no-constant-condition
       while (true) {
         if (chunk.done || pred(chunk.value)) {
           return chunk;
