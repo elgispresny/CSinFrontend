@@ -34,8 +34,7 @@ const regExp4 = new RegExp(/\${(.*?)}/g);
 const bob = new User("Bob", 10);
 
 const format = (str: string, user: User): any => {
-    
-    return str.replace(regExp4, (str: string, v: string):any => {
+  return str.replace(regExp4, (str: string, v: string): any => {
         return user[v];
     });
 }

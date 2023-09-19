@@ -2,7 +2,7 @@ function enumerate<T>(iter: Iterable<T>): IterableIterator<T> {
   const cursor = iter[Symbol.iterator]();
   let j = 0;
 
-  return <any> {
+  return <any>{
     [Symbol.iterator]() {
       return this;
     },
